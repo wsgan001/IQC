@@ -1,0 +1,184 @@
+\documentclass[12pt,twoside,dvipsnames]{article}
+\usepackage{lscape}
+\usepackage[small,bf]{caption}
+\usepackage[charter]{mathdesign}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{qtree}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+%\usepackage{amsthm}
+\usepackage{bm}
+\usepackage{float}
+\usepackage{cite}
+\usepackage{pdflscape}
+\usepackage{placeins}
+\usepackage{afterpage}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{wrapfig}
+\usepackage{multicol}
+\usepackage{pdflscape}
+%\usepackage{pdfpages}
+\usepackage{layout}
+\setlength{\headheight}{35pt}
+\usepackage{longtable,booktabs}
+\usepackage{makecell}
+
+\DeclareMathOperator{\TE}{Total\ Error}
+\DeclareMathOperator{\ME}{Measurement\ Error}
+\DeclareMathOperator{\SE}{Sampling\ Error}
+\DeclareMathOperator{\NE}{Nonresponse\ Error}
+\DeclareMathOperator{\CE}{Coverage\ Error}
+\DeclareMathOperator{\Bias}{Bias}
+\DeclareMathOperator{\MSE}{MSE}
+\DeclareMathOperator{\GE}{E}
+\DeclareMathOperator{\GV}{V}
+\DeclareMathOperator{\GC}{Cov}
+\DeclareMathOperator{\SRS}{SRS}
+\DeclareMathOperator{\StS}{StS}
+\DeclareMathOperator{\SyS}{SyS}
+\DeclareMathOperator{\ClS}{ClS}
+\DeclareMathOperator{\PPS}{PPS}
+\DeclareMathOperator{\MMS}{MMS}
+\DeclareMathOperator{\MPS}{MPS}
+
+
+\newtheorem{theorem}{Theorem}
+
+\newcommand{\thedraft}{(DRAFT)}
+%\newcommand{\thedraft}{}
+
+
+\newcommand{\newtitle}{Introduction to Quantitative Consulting}
+
+\voffset=-.5in
+\hoffset=-.75in
+\oddsidemargin=0.65in
+\evensidemargin=0.65in
+\topmargin=-0.15in
+\textheight=9.1in
+\textwidth=6.7in
+
+\usepackage[dvipsnames]{xcolor}
+
+\newcommand{\localtextbulletone}{\textcolor{BrickRed}{\raisebox{.45ex}{\rule{.6ex}{.6ex}}}}
+\renewcommand{\labelitemi}{\localtextbulletone}
+
+\newcommand*{\doi}[1]{\href{http://dx.doi.org/\detokenize{#1}}{doi:\detokenize{#1}}}
+\newcommand*{\www}[1]{\href{http://\detokenize{#1}}{\textcolor{BrickRed}{\detokenize{#1}}}}
+\newcommand*{\wwws}[1]{\href{https://\detokenize{#1}}{\textcolor{BrickRed}{\detokenize{#1}}}}
+\newcommand*{\newhref}[2]{\href{#1}{\textbf{\textcolor{BrickRed}{#2}}}}
+
+\usepackage{pdfpages}
+\usepackage{tikz}
+\usepackage{changepage}
+%\addto{\captionsenglish}{\renewcommand{\abstractname}{Summary}}
+
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\tcbuselibrary{breakable}
+
+\let\OLDthebibliography\thebibliography
+\renewcommand\thebibliography[1]{
+  \OLDthebibliography{#1}
+  \setlength{\parskip}{0pt}
+  \setlength{\itemsep}{0pt plus 0.3ex}
+}
+
+\makeatletter
+\renewcommand{\maketitle}{\bgroup\setlength{\parindent}{0pt}
+\begin{flushleft}
+  \textbf{\@title}
+
+  \@author
+\end{flushleft}\egroup
+}
+\renewcommand{\footrulewidth}{0.4pt}% default is 0pt
+\makeatother
+
+\title{\Large{\newtitle\ \thedraft}}
+
+\author{\ \\ \normalsize{Patrick Boily, Jennifer Schellinck, Shintaro Hagiwara} \\ with \normalsize{Iris Kiewiet, Ehssan Ghassim, and Kevin Cheung}  \\ \ \\ \today }
+
+
+\renewcommand{\sectionmark}[1]{\markboth{\textsc{#1}}{}}
+\newcommand{\newl}{\newline\newline}
+
+\begin{document}
+%\layout
+%\begingroup
+%\let\center\flushleft
+%\let\endcenter\endflushleft
+%\maketitle
+%\thispagestyle{fancy}
+%\lhead{\includegraphics[height=30pt]{images/admin/Sysabee}}
+%\chead{\includegraphics[height=30pt]{images/admin/CQADS}}
+%\rhead{\includegraphics[height=30pt]{images/admin/Idlewyld}}
+%\cfoot{}
+%\endgroup
+
+%\begingroup
+%\thispagestyle{empty}
+%\begin{tikzpicture}[remember picture,overlay]
+%\node[inner sep=0pt] (background) at (current page.center) %{\includegraphics[width=\paperwidth]{documents/Cover.pdf}};
+% Author name
+%\end{tikzpicture}
+%\vfill
+%\endgroup
+%\thispagestyle{empty}
+%\ \newl\newl\newl\newl\newl\begin{center}\Huge{DRAFT}\end{center}
+
+
+
+%\headheight = 0pt
+%\headsep = 0pt
+%\voffset=-1in
+%\hoffset=-1in
+%\oddsidemargin=0in
+%\evensidemargin=0in
+%\topmargin=0in
+%\textheight=11in
+%\textwidth=8.5in
+
+%\begin{center}
+%\includegraphics[width=\textwidth]{documents/Cover.pdf}
+%\end{center}
+%\newpage
+%\thispagestyle{empty}
+%\noindent Licensed under the Creative Commons/Attribution/Non-Commercial/Share Alike Unported License (the ``License''). You may not use this file except in compliance with the License. You may obtain a copy of the License at \url{http://creativecommons.org/licenses/by-nc-sa/4.0}. Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \textsc{``as is'' basis, without warranties or conditions of any kind}, either express or implied. See the License for the specific language governing permissions and limitations under the License.\\ % License information
+
+%\noindent \hfill \includegraphics[height=30pt]{images/ZZ/cc.png} \includegraphics[height=30pt]{images/ZZ/by.png}  \includegraphics[height=30pt]{images/ZZ/nc.png} \includegraphics[height=30pt]{images/ZZ/sa.png} \\ % Copyright notice
+
+%\noindent \textit{First printing, September 2018} % Printing/edition date
+\headheight = 35pt
+\headsep = 25pt
+\voffset=-.5in
+\hoffset=-.75in
+\oddsidemargin=0.65in
+\evensidemargin=0.65in
+\topmargin=-0.15in
+\textheight=9.1in
+\textwidth=6.7in
+\newpage 
+%\thispagestyle{empty}
+%\section*{Acknowledgments}
+%We would like to acknowledge the many individuals and organisations that have made this work possible: Dong Liu, Katrina Rogers-Stewart, Lani Haque, Andrew Macfie, Yue Huang, Yao Ying, Colin Daniel, Yiqiang Zhao, Malcolm Butler, Korey MacDougall, and Pat Farrell. 
+%\newpage
+
+
+\tableofcontents 
+\listoffigures
+\listoftables
+
+\pagestyle{fancy}
+\lhead[\textsc{\newtitle}]{P Boily, J Schellinck, S Hagiwara \thedraft}
+\rhead[P Boily, J Schellinck, S Hagiwara \thedraft]{\textsc{\rightmark}}
+\chead{}
+\rfoot[\footnotesize\thepage]{\footnotesize{\thedraft}}
+\cfoot{}
+\lfoot[\footnotesize{\thedraft}]{\footnotesize{\thepage}}
+
+\newpage\noindent
+\input{main/body.tex}
+\end{document}
